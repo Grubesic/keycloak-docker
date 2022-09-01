@@ -13,6 +13,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 ENV KC_DB_SCHEMA="public"
 ENV KC_PROXY="edge"
-
+ENV KC_HOSTNAME=https://auth.grucro.com/
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
-CMD ["start"]
+CMD ["start --optimized"]
