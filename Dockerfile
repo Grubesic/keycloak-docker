@@ -12,7 +12,7 @@ FROM quay.io/keycloak/keycloak:latest
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 ENV KC_PROXY="edge"
-ENV KC_HOSTNAME=https://auth.grucro.com/
+ENV KC_HOSTNAME=auth.grucro.com
 ENV KEYCLOAK_USER=admin
 ENV KEYCLOAK_PASSWORD=admin
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
